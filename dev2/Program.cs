@@ -4,17 +4,17 @@
 
 Console.Clear();
 
-int[] array = new int [50];
+int[] array = new int [25];
 
 Console.Write("[");
 for (int i = 0; i < array.Length; i++)
 {
-    array[i] = new Random().Next(0, 51);
+    array[i] = new Random().Next(0, 26);
     Console.Write(" " + array[i] + " ");
 }
 Console.WriteLine("]");
 
-Console.WriteLine(" ");
+Console.WriteLine("->");
 Console.Write("[");
 for (int j = 0; j < array.Length; j++)
 {
