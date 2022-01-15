@@ -27,7 +27,6 @@ string PrintArray(int[] array)
 int[] FillNewArray(int[] array)
 {
     int newarraylength = 0;
-    //int[] newarray = new int [newarraylength];
     for (int i = 0; i < array.Length; i++)
     {
         if (array[i] > 8)
@@ -55,9 +54,9 @@ void Demo ()
     FillArray(array);
     PrintArray(array);
     Console.WriteLine("");
-    //int[] newarray = new int [newarraylength];
-    FillNewArray(newarray);
-    PrintArray(array);
+    //int[] newarray = new int [FillNewArray(array)];
+    FillNewArray(array);
+    PrintArray(newarray);
 }
 
 Demo ();
