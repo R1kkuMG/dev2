@@ -23,7 +23,6 @@ string PrintArray(int[] array)
     return result;
 }
 
-
 int[] FillNewArray(int[] array)
 {
     int newarraylength = 0;
@@ -34,7 +33,6 @@ int[] FillNewArray(int[] array)
             newarraylength ++;
         }
     }
-    //return newarraylength;
 
     int[] newarray = new int [newarraylength];
     for (int j = 0, k = 0; j < array.Length; j++)
@@ -54,9 +52,8 @@ void Demo ()
     FillArray(array);
     PrintArray(array);
     Console.WriteLine("");
-    //int[] newarray = new int [FillNewArray(array)];
     FillNewArray(array);
-    PrintArray(newarray);
+    PrintArray(FillNewArray(array));
 }
 
 Demo ();
