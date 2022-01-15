@@ -8,33 +8,33 @@ void FillArray(int[] array)
 {
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = new Random().Next(0, 26);
+        array[i] = new Random().Next(0, 16);
     }
 }
 
-void PrintArray(int[] array)
+string PrintArray(int[] array)
 {
+    string result = "";
     for (int i = 0; i < array.Length; i++)
     {
-        Console.Write($"{array[i]} ");
+        result = array[i].ToString();
+        Console.Write($" {result} ");
     }
+    return result;
 }
 
-int ArraySize(int[] newarray)
+int[] FillNewArray(int[] array)
 {
     int newarraylength = 0;
     for (int i = 0; i < newarray.Length; i++)
     {
         if (newarray[i] > 8)
         {
-            newarraylength++;
+            newarraylength ++;
         }
     }
-    return newarraylength;
-}
 
-void FillNewArray(int[] array, int[] newarray)
-{
+    int[] newarray = new int [newarraylength];
     for (int j = 0, k = 0; j < array.Length; j++)
     {
         if (array[j] > 8)
@@ -43,17 +43,18 @@ void FillNewArray(int[] array, int[] newarray)
             k++;
         }
     }
+    return newarray;  
 }
 
 void Demo ()
 {
-    int[] array = new int[25];
+    int[] array = new int[15];
     FillArray(array);
     PrintArray(array);
     Console.WriteLine("");
-    int[] newarray = new int [ArraySize(array)];
-    FillNewArray (array, newarray);
-    PrintArray(newarray);
+    //int[] newarray = new int [ArraySize(array)];
+    FillNewArray(array);
+    PrintArray(array);
 }
 
 Demo ();
