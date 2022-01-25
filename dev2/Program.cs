@@ -52,7 +52,6 @@ void Demo ()
     FillArray(array);
     PrintArray(array);
     Console.WriteLine("");
-    FillNewArray(array);
     PrintArray(FillNewArray(array));
 }
 
